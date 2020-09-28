@@ -17,32 +17,31 @@ public class Matriser {
 	    }
 	// b)
 	public static String tilStreng(int[][] matrise) {
-		 String verdi="";
-	        for (int rad = 0; rad<3; rad++) {
-	            verdi += "{";
-	        for (int kol = 0; kol < 3; kol++) {
+		 String nom="";
+	        for (int rad = 0; rad<matrise.length; rad++) {
+	        for (int kol = 0; kol < matrise[rad].length; kol++) {
 
-	            verdi += matrise[rad][kol];
-	            if (kol < matrise.length-1) verdi += ", ";
+	            nom += matrise[rad][kol];
+	            if (kol < matrise.length-1) nom += " ";
 	        }
-	        verdi += "} ";
+	        nom += "\n";
 
 	    }
-	        return verdi;
+	        return nom;
 		
 	}
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
-		 int[][] verdi = matrise;
+		 int[][] sum = matrise;
 
 	        for (int rad = 0; rad<matrise.length; rad++) {
 	            int a = matrise[rad].length;
 	            for (int kol = 0; kol<a; kol++) {
-	                verdi[rad][kol] = matrise[rad][kol]*tall;
+	                sum[rad][kol] = matrise[rad][kol]*tall;
 	            }
 	        }
-	        return verdi;
+	        return sum;
 	}
 
 	// d)
@@ -66,16 +65,16 @@ public class Matriser {
 	public static int[][] speile(int[][] matrise) {
 
 		int rader = matrise.length;
-        int [][] a = new int[rader][rader];
+        int [][] o = new int[rader][rader];
         for (int rad = 0; rad < rader; rad++) {
             int c = rader-1;
             for (int kol = 0; kol<rader; kol++) {
 
-                a[rad][kol] = matrise[rad][c];
+                o[rad][kol] = matrise[rad][c];
                 c--;
             }
         }
-        return a;
+        return o;
     }
 	// f)
 	public static int[][] multipliser(int[][] a, int[][] b) {

@@ -24,7 +24,7 @@ public class Tabeller {
 		        for (int g = 0; g < tabell.length; g++) {
 
 		            verdi = verdi + tabell[g];
-		            if (g < tabell.length-1) verdi += ", ";
+		            if (g < tabell.length-1) verdi += ",";
 		        }	
 		        verdi += "]";
 		        return verdi;
@@ -74,13 +74,13 @@ public class Tabeller {
 
 	// f)
 	public static int[] reverser(int[] tabell) {
-
-	     int[] A = { 0, 0, 0, 0, 0, 0};
-	        int x = 0;
-	        for (int tall = tabell.length-1; tall > -1;) {
+int b = tabell.length;
+	     int[] A = new int[b];
+	        int x = tabell.length-1;
+	        for (int tall = 0; tall < tabell.length;  tall++) {
 	            A[x]= tabell[tall];
-	            x++;
-	            tall--;
+	            x--;
+	           
 	        }
 
 	        return A;
