@@ -5,18 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class TabellerEnhetsTester {
-
+	   public static void main(String[] args) {
+	  
+	  }
 	private static int[] tabell1 = { 1, 4, 6 };
 	private static int[] tabell2 = { 1 };
 	private static int[] tabell3 = {};
-	
-	@Test
-	void testSkrivUt() {
-		
-		Tabeller.skrivUt(tabell1);
-		Tabeller.skrivUt(tabell2);
-		Tabeller.skrivUt(tabell3);
-	}
+
+	   
 
 	@Test
 	void testtilStreng() {
